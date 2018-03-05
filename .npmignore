@@ -2,3 +2,4 @@ tsconfig.json
 .prettierrc
 tslint.json
 yarn.lock
+doc
