@@ -1,0 +1,31 @@
+{
+  "name": "react-native-custom-picker",
+  "version": "0.0.1",
+  "description": "React native customizable picker component.",
+  "main": "dist/index.js",
+  "typings": "typings/index.d.ts",
+  "files": [
+    "dist",
+    "typings"
+  ],
+  "repository": "https://github.com/budiadiono/react-native-custom-picker",
+  "author": "Budi Adiono",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf typings && tsc -d --declarationDir ./typings && prettier ./typings/**/*.d.ts --write"
+  },
+  "devDependencies": {
+    "@types/react": "^16.0.40",
+    "@types/react-native": "^0.52.16",
+    "awesome-typescript-loader": "^3.5.0",
+    "prettier": "^1.11.1",
+    "react": "^16.2.0",
+    "react-native": "^0.54.0",
+    "source-map-loader": "^0.2.3",
+    "tslib": "^1.9.0",
+    "tslint": "^5.9.1",
+    "tslint-config-prettier": "^1.9.0",
+    "tslint-react": "^3.5.1",
+    "typescript": "^2.7.2"
+  }
+}
