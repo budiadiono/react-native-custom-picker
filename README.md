@@ -21,6 +21,7 @@ yarn add react-native-custom-picker
 | Prop Name           | Data Type | Default Values  | Description                                       |
 |---------------------|-----------|-----------------|---------------------------------------------------|
 | **options**         | any[]     | undefined       | Option list.                                      |
+| value               | any       | undefined       | Current selected item.                            |
 | placeholder         | string    | 'Pick an item'  | Placeholder, as default text to display when no option is selected. |
 | modalAnimationType  | 'none', 'slide' or 'fade' | 'none' | Modal animation type. |
 | headerTemplate      | HeaderTemplateFunction | undefined | Assign function to render header. |

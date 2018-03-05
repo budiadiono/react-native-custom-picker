@@ -123,6 +123,19 @@ export class CustomPicker extends React.PureComponent<
     )
   }
 
+  componentDidMount() {
+    const { value } = this.props
+    if (value) {
+      this.selectOption(value)
+    }
+  }
+
+  componentWillReceiveProps(nextProps: CustomPickerProps) {
+    if (nextProps.value !== this.props.value) {
+      this.selectOption(nextProps.value)
+    }
+  }
+
   /**
    * Default getLabel function. A get label from item function.
    * @param item Item value to translate.

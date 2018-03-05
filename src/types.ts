@@ -108,6 +108,11 @@ export interface CustomPickerProps {
   getLabel?: (selectedValue: any) => string
 
   /**
+   * Current selected item.
+   */
+  value?: any
+
+  /**
    * Option list.
    */
   options: any[]
