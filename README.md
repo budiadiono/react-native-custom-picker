@@ -224,6 +224,12 @@ const styles = StyleSheet.create({
 })
 ```
 
+## Example Projects
+
+[Built with Typescript](https://github.com/budiadiono/react-native-custom-picker-example-ts)
+
+[Built with Javascript](https://github.com/budiadiono/react-native-custom-picker-example)
+
 
 ## License
 
