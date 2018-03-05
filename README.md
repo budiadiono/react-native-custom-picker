@@ -43,7 +43,7 @@ yarn add react-native-custom-picker
 
 You can use `CustomPicker` component directly as shown below:
 
-![Basic Example Demo](doc/images/basic-example.gif?raw=true "Basic Example Demo")
+![Basic Example Demo](https://rawgit.com/budiadiono/react-native-custom-picker/master/doc/images/basic-example.gif "Basic Example Demo")
 
 ```javascript
 import * as React from 'react'
@@ -71,7 +71,7 @@ export class BasicExample extends React.Component {
 
 Or customize it your self like this:
 
-![Advanced Example Demo](doc/images/advanced-example.gif?raw=true "Advanced Example Demo")
+![Advanced Example Demo](https://rawgit.com/budiadiono/react-native-custom-picker/master/doc/images/advanced-example.gif "Advanced Example Demo")
 
 ```javascript
 import * as React from 'react'
