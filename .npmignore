@@ -3,3 +3,4 @@ tsconfig.json
 tslint.json
 yarn.lock
 doc
+release.sh
