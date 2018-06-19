@@ -3,3 +3,4 @@ dist/
 tmp/
 typings/
 npm-debug.*
+yarn-error.*
