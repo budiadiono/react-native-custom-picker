@@ -4,3 +4,5 @@ tslint.json
 yarn.lock
 doc
 release.sh
+example/*
+src/*

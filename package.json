@@ -12,7 +12,8 @@
   "author": "Budi Adiono",
   "license": "MIT",
   "scripts": {
-    "build": "rm -rf typings && tsc -d --declarationDir ./typings && prettier ./typings/**/*.d.ts --write"
+    "compile": "tsc -d --declarationDir ./typings",
+    "build": "rm -rf typings && npm run compile && prettier ./typings/**/*.d.ts --write"
   },
   "devDependencies": {
     "@types/react": "^16.0.40",
@@ -27,5 +28,9 @@
     "tslint-config-prettier": "^1.9.0",
     "tslint-react": "^3.5.1",
     "typescript": "^2.7.2"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
   }
 }

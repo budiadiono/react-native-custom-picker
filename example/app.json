@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "react native custom picker example",
+    "description": "This project is really great.",
+    "slug": "react-native-custom-picker-example",
+    "privacy": "public",
+    "sdkVersion": "27.0.0",
+    "platforms": ["ios", "android"],
+    "version": "0.0.1",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "packagerOpts": {
+      "assetExts": [
+        "ttf"
+      ],
+      "config": "./rn-cli.config.js",
+      "projectRoots": ""
+    }
+  }
+}
