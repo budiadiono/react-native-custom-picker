@@ -50,6 +50,7 @@ export class CustomPicker extends React.PureComponent<
       footerTemplate,
       style,
       fieldTemplateProps,
+      optionTemplateProps,
       backdropStyle,
       modalStyle
     } = this.props
@@ -72,7 +73,7 @@ export class CustomPicker extends React.PureComponent<
               defaultText: placeholder || DEFAULT_TEXT,
               selectedItem: this.state.selectedItem,              
               ...actions,
-              ...fieldTemplateProps
+              ...fieldTemplateProps              
             })}
           </View>
         </TouchableOpacity>
@@ -109,7 +110,8 @@ export class CustomPicker extends React.PureComponent<
                         {optionTemplate({
                           item: o,
                           getLabel: this.props.getLabel || this.getLabel,
-                          ...actions
+                          ...actions,
+                          ...optionTemplateProps
                         })}
                       </TouchableOpacity>
                     ))}
@@ -197,5 +199,7 @@ export {
   OptionTemplateFunction,
   OptionTemplateSettings,
   HeaderTemplateFunction,
-  FooterTemplateFunction
+  FooterTemplateFunction,
+  FieldTemplateProps,
+  OptionTemplateProps
 } from './types'

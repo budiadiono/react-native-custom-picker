@@ -55,10 +55,26 @@ export interface FieldTemplateSettings<T = any>
 }
 
 /**
+ * Props for option template.
+ */
+export interface OptionTemplateProps {
+  /**
+   * Style of option text.
+   */
+  textStyle?: TextStyle
+
+  /**
+   * Style of option container.
+   */
+  containerStyle?: ViewStyle
+}
+
+/**
  * Render option template settings.
  */
 export interface OptionTemplateSettings<T = any>
-  extends CustomPickerActions<T> {
+  extends CustomPickerActions<T>,
+    OptionTemplateProps {
   item: any
 }
 
@@ -138,6 +154,11 @@ export interface CustomPickerProps {
    * Option list.
    */
   options: any[]
+
+  /**
+   * Props for option template.
+   */
+  optionTemplateProps?: OptionTemplateProps
 
   /**
    * Style of field container.

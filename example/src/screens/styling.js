@@ -38,6 +38,15 @@ export class StylingExample extends React.Component {
               />
             )
           }}
+          optionTemplateProps={{
+            containerStyle: {
+              backgroundColor: '#343434',
+              height: 60
+            },
+            textStyle: {
+              color: '#6CA6C1'
+            }
+          }}
         />
       </View>
     )

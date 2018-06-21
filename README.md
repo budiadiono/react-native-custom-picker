@@ -29,6 +29,7 @@ yarn add react-native-custom-picker
 | fieldTemplate       | FieldTemplateFunction | Basic/default field view | Assign function to render field view. |
 | fieldTemplateProps  | [FieldTemplateProps](#fieldtemplateprops)     | undefined | Props for field template |
 | optionTemplate      | OptionTemplateFunction | Basic/default option view | Assign function to render option. |
+| optionTemplateProps | [OptionTemplateProps](#optiontemplateprops)     | undefined | Props for option template |
 | getLabel      | (selectedItem: any) => string | Returns `selectedItem.toString()`  | Assign function to return the selected option text to be displayed in field. |
 | style               | ViewStyle | default         | Style of field container.                         |
 | backdropStyle       | ViewStyle | default         | Style of modal backdrop.                          |
@@ -45,6 +46,13 @@ yarn add react-native-custom-picker
 | textStyle           | TextStyle | undefined       | Style of field text.                              |
 | containerStyle      | ViewStyle | undefined       | Style of field container.                         |
 | clearImage          | JSX.Element | cross icon    | Image element for clear button.                   |
+
+### OptionTemplateProps
+
+| Prop Name           | Data Type | Default Values  | Description                                       |
+|---------------------|-----------|-----------------|---------------------------------------------------|
+| textStyle           | TextStyle | undefined       | Style of option text.                             |
+| containerStyle      | ViewStyle | undefined       | Style of option container.                        |
 
 
 ## Example
