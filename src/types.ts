@@ -1,4 +1,4 @@
-import { ViewStyle } from 'react-native'
+import { TextStyle, ViewStyle } from 'react-native'
 
 // tslint:disable:no-any
 
@@ -25,9 +25,31 @@ export interface CustomPickerActions<T = any> {
 }
 
 /**
+ * Props for field template
+ */
+export interface FieldTemplateProps {
+  /**
+   * Style of field text.
+   */
+  textStyle?: TextStyle
+
+  /**
+   * Style of field container.
+   */
+  containerStyle?: ViewStyle
+
+  /**
+   * Image element for clear button.
+   */
+  clearImage?: JSX.Element
+}
+
+/**
  * Render field template settings.
  */
-export interface FieldTemplateSettings<T = any> extends CustomPickerActions<T> {
+export interface FieldTemplateSettings<T = any>
+  extends CustomPickerActions<T>,
+    FieldTemplateProps {
   defaultText: string
   selectedItem: T
 }
@@ -121,6 +143,11 @@ export interface CustomPickerProps {
    * Style of field container.
    */
   style?: ViewStyle
+
+  /**
+   * Props for field template.
+   */
+  fieldTemplateProps?: FieldTemplateProps
 
   /**
    * Style of modal backdrop.

@@ -27,6 +27,7 @@ yarn add react-native-custom-picker
 | headerTemplate      | HeaderTemplateFunction | undefined | Assign function to render header. |
 | footerTemplate      | FooterTemplateFunction | undefined | Assign function to render footer. |
 | fieldTemplate       | FieldTemplateFunction | Basic/default field view | Assign function to render field view. |
+| fieldTemplateProps  | [FieldTemplateProps](#fieldtemplateprops)     | undefined | Props for field template |
 | optionTemplate      | OptionTemplateFunction | Basic/default option view | Assign function to render option. |
 | getLabel      | (selectedItem: any) => string | Returns `selectedItem.toString()`  | Assign function to return the selected option text to be displayed in field. |
 | style               | ViewStyle | default         | Style of field container.                         |
@@ -36,6 +37,14 @@ yarn add react-native-custom-picker
 | onValueChange       | ViewStyle | undefined       | Event fired when value has been changed.          |
 | onFocus             | ViewStyle | undefined       | Event fired when modal is opened.                 |
 | onBlur              | ViewStyle | undefined       | Event fired when modal is closed.                 |
+
+### FieldTemplateProps
+
+| Prop Name           | Data Type | Default Values  | Description                                       |
+|---------------------|-----------|-----------------|---------------------------------------------------|
+| textStyle           | TextStyle | undefined       | Style of field text.                              |
+| containerStyle      | ViewStyle | undefined       | Style of field container.                         |
+| clearImage          | JSX.Element | cross icon    | Image element for clear button.                   |
 
 
 ## Example

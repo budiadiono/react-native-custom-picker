@@ -49,6 +49,7 @@ export class CustomPicker extends React.PureComponent<
       headerTemplate,
       footerTemplate,
       style,
+      fieldTemplateProps,
       backdropStyle,
       modalStyle
     } = this.props
@@ -69,8 +70,9 @@ export class CustomPicker extends React.PureComponent<
           <View style={style}>
             {fieldTemplate({
               defaultText: placeholder || DEFAULT_TEXT,
-              selectedItem: this.state.selectedItem,
-              ...actions
+              selectedItem: this.state.selectedItem,              
+              ...actions,
+              ...fieldTemplateProps
             })}
           </View>
         </TouchableOpacity>
@@ -89,8 +91,7 @@ export class CustomPicker extends React.PureComponent<
             >
               <View
                 style={[
-                  { flex: 1, justifyContent: 'center', paddingHorizontal: 20 },
-                  style
+                  { flex: 1, justifyContent: 'center', paddingHorizontal: 20 }
                 ]}
               >
                 <View
