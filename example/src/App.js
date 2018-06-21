@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from 'react-navigation'
 import { BasicExample } from './screens/basic'
 import { CustomExample } from './screens/custom'
 import { InteractiveExample } from './screens/interactive'
+import { StylingExample } from './screens/styling'
 
 export default class App extends React.Component {
   render() {
@@ -20,6 +21,7 @@ export default class App extends React.Component {
 const MainNav = createBottomTabNavigator(
   {
     Basic: { screen: BasicExample },
+    Styling: { screen: StylingExample },
     Custom: { screen: CustomExample },
     Interactive: { screen: InteractiveExample }
   },
