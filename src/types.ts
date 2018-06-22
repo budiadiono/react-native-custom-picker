@@ -151,6 +151,11 @@ export interface CustomPickerProps {
   value?: any
 
   /**
+   * Default value.
+   */
+  defaultValue?: any
+
+  /**
    * Option list.
    */
   options: any[]

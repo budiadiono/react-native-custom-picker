@@ -22,6 +22,7 @@ yarn add react-native-custom-picker
 |---------------------|-----------|-----------------|---------------------------------------------------|
 | **options**         | any[]     | undefined       | Option list.                                      |
 | value               | any       | undefined       | Current selected item.                            |
+| defaultValue        | any       | undefined       | Default value. When clear button pressed this value become selected item.|
 | placeholder         | string    | 'Pick an item'  | Placeholder, as default text to display when no option is selected. |
 | modalAnimationType  | 'none', 'slide' or 'fade' | 'none' | Modal animation type. |
 | headerTemplate      | HeaderTemplateFunction | undefined | Assign function to render header. |

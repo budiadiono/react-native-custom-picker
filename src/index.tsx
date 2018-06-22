@@ -71,9 +71,9 @@ export class CustomPicker extends React.PureComponent<
           <View style={style}>
             {fieldTemplate({
               defaultText: placeholder || DEFAULT_TEXT,
-              selectedItem: this.state.selectedItem,              
+              selectedItem: this.state.selectedItem,
               ...actions,
-              ...fieldTemplateProps              
+              ...fieldTemplateProps
             })}
           </View>
         </TouchableOpacity>
@@ -127,9 +127,9 @@ export class CustomPicker extends React.PureComponent<
   }
 
   componentDidMount() {
-    const { value } = this.props
-    if (value) {
-      this.selectOption(value)
+    const { value, defaultValue } = this.props
+    if (value || defaultValue) {
+      this.selectOption(value || defaultValue)
     }
   }
 
@@ -185,7 +185,8 @@ export class CustomPicker extends React.PureComponent<
    * Clear selected value.
    */
   clear() {
-    this.selectOption(null)
+    const { defaultValue } = this.props
+    this.selectOption(defaultValue || null)
   }
 }
 
