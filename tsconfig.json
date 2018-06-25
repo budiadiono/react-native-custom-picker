@@ -4,7 +4,7 @@
     "module": "commonjs",
     "target": "es5",
     "lib": ["es6", "dom"],
-    "sourceMap": true,    
+    "sourceMap": true,
     "jsx": "react",
     "moduleResolution": "node",
     "forceConsistentCasingInFileNames": true,
@@ -13,15 +13,8 @@
     "noImplicitAny": true,
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true
+    "noUnusedLocals": true,
+    "skipLibCheck": true
   },
-  "exclude": [
-    "node_modules",
-    "build",
-    "scripts",
-    "acceptance-tests",
-    "webpack",
-    "jest",
-    "typings"
-  ]
+  "exclude": ["node_modules", "typings", "**/*.test.ts?"]
 }

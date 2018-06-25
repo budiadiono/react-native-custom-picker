@@ -12,17 +12,27 @@
   "author": "Budi Adiono",
   "license": "MIT",
   "scripts": {
+    "test": "jest",
     "compile": "tsc -d --declarationDir ./typings",
     "build": "rm -rf typings && npm run compile && prettier ./typings/**/*.d.ts --write"
   },
   "devDependencies": {
+    "@types/enzyme": "^3.1.10",
+    "@types/enzyme-adapter-react-16": "^1.0.2",
+    "@types/jest": "^23.1.1",
     "@types/react": "^16.0.40",
     "@types/react-native": "^0.52.16",
     "awesome-typescript-loader": "^3.5.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.4",
+    "jest": "^23.1.0",
     "prettier": "^1.11.1",
     "react": "^16.2.0",
+    "react-dom": "^16.4.1",
     "react-native": "^0.54.0",
     "source-map-loader": "^0.2.3",
+    "ts-jest": "^22.4.6",
     "tslib": "^1.9.0",
     "tslint": "^5.9.1",
     "tslint-config-prettier": "^1.9.0",
@@ -32,5 +42,36 @@
   "peerDependencies": {
     "react": "*",
     "react-native": "*"
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "useBabelrc": true
+      }
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "preset": "react-native",
+    "setupFiles": [
+      "<rootDir>/src/__tests__/__setup__/enzyme.js"
+    ],
+    "testMatch": [
+      "<rootDir>/src/__tests__/**/?(*.)(spec|test).[tj]s?(x)"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "modulePathIgnorePatterns": [
+      "<rootDir>/example/node_modules"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   }
 }

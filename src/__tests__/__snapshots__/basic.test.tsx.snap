@@ -1,0 +1,177 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomPicker Basic Tests should render correctly with initial props 1`] = `
+<View>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    onPress={[Function]}
+  >
+    <View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "borderBottomColor": "grey",
+              "borderBottomWidth": 1,
+              "flexDirection": "row",
+              "height": 40,
+              "justifyContent": "space-between",
+              "margin": 10,
+            },
+            undefined,
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Pick an item...
+        </Text>
+      </View>
+    </View>
+  </TouchableOpacity>
+  <Component
+    animationType="none"
+    hardwareAccelerated={false}
+    onRequestClose={[Function]}
+    transparent={true}
+    visible={false}
+  >
+    <TouchableWithoutFeedback
+      onPress={[Function]}
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0,0,0,0.4)",
+              "flex": 1,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "flex": 1,
+                "justifyContent": "center",
+                "paddingHorizontal": 20,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "white",
+                  "maxHeight": 1274,
+                },
+                undefined,
+              ]
+            }
+          >
+            <ScrollView>
+              <TouchableOpacity
+                activeOpacity={0.2}
+                key="0"
+                onPress={[Function]}
+              >
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                        "borderBottomColor": "grey",
+                        "borderBottomWidth": 1,
+                        "flexDirection": "row",
+                        "height": 40,
+                        "justifyContent": "space-between",
+                        "paddingHorizontal": 10,
+                      },
+                      undefined,
+                    ]
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                  >
+                    1
+                  </Text>
+                </View>
+              </TouchableOpacity>
+              <TouchableOpacity
+                activeOpacity={0.2}
+                key="1"
+                onPress={[Function]}
+              >
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                        "borderBottomColor": "grey",
+                        "borderBottomWidth": 1,
+                        "flexDirection": "row",
+                        "height": 40,
+                        "justifyContent": "space-between",
+                        "paddingHorizontal": 10,
+                      },
+                      undefined,
+                    ]
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                  >
+                    2
+                  </Text>
+                </View>
+              </TouchableOpacity>
+              <TouchableOpacity
+                activeOpacity={0.2}
+                key="2"
+                onPress={[Function]}
+              >
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                        "borderBottomColor": "grey",
+                        "borderBottomWidth": 1,
+                        "flexDirection": "row",
+                        "height": 40,
+                        "justifyContent": "space-between",
+                        "paddingHorizontal": 10,
+                      },
+                      undefined,
+                    ]
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                  >
+                    3
+                  </Text>
+                </View>
+              </TouchableOpacity>
+            </ScrollView>
+          </View>
+        </View>
+      </View>
+    </TouchableWithoutFeedback>
+  </Component>
+</View>
+`;
