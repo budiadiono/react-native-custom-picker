@@ -1,5 +1,8 @@
 # React Native Custom Picker
 
+[![npm version](https://badge.fury.io/js/react-native-custom-picker.svg)](https://badge.fury.io/js/react-native-custom-picker)
+[![build status](https://travis-ci.org/budiadiono/react-native-custom-picker.svg)](https://travis-ci.org/budiadiono/react-native-custom-picker)
+
 React native customizable picker component.
 
 ## Installation
