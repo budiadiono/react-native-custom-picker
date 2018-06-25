@@ -13,10 +13,10 @@ import defaultOptionTemplate from './defaultOptionTemplate'
 import {
   CustomPickerActions,
   CustomPickerProps,
-  CustomPickerState
+  CustomPickerState,
+  FieldTemplateFunction,
+  OptionTemplateFunction
 } from './types'
-
-const DEFAULT_TEXT = 'Pick an item...'
 
 /**
  * React native customizable picker component
@@ -25,6 +25,13 @@ export class CustomPicker extends React.PureComponent<
   CustomPickerProps,
   CustomPickerState
 > {
+  static defaultProps: Partial<CustomPickerProps> = {
+    fieldTemplate: defaultFieldTemplate,
+    optionTemplate: defaultOptionTemplate,
+    placeholder: 'Pick an item...',
+    modalAnimationType: 'none'
+  }
+
   constructor(props: CustomPickerProps) {
     super(props)
     this.state = {
@@ -39,11 +46,10 @@ export class CustomPicker extends React.PureComponent<
   }
 
   render() {
-    const fieldTemplate = this.props.fieldTemplate || defaultFieldTemplate
-    const optionTemplate = this.props.optionTemplate || defaultOptionTemplate
-
     const {
       modalAnimationType,
+      fieldTemplate,
+      optionTemplate,
       placeholder,
       options,
       headerTemplate,
@@ -62,6 +68,9 @@ export class CustomPicker extends React.PureComponent<
       close: this.hideOptions
     }
 
+    const ft = fieldTemplate as FieldTemplateFunction
+    const ot = optionTemplate as OptionTemplateFunction
+
     const maxHeight =
       this.props.maxHeight || Dimensions.get('window').height - 60
 
@@ -69,8 +78,8 @@ export class CustomPicker extends React.PureComponent<
       <View>
         <TouchableOpacity onPress={this.showOptions}>
           <View style={style}>
-            {fieldTemplate({
-              defaultText: placeholder || DEFAULT_TEXT,
+            {ft({
+              defaultText: placeholder as string,
               selectedItem: this.state.selectedItem,
               ...actions,
               ...fieldTemplateProps
@@ -107,7 +116,7 @@ export class CustomPicker extends React.PureComponent<
                         }}
                         key={index}
                       >
-                        {optionTemplate({
+                        {ot({
                           item: o,
                           getLabel: this.props.getLabel || this.getLabel,
                           ...actions,
