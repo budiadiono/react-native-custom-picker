@@ -1,4 +1,4 @@
-import { TextStyle, ViewStyle } from 'react-native'
+import { StyleProp, TextStyle, ViewStyle } from 'react-native'
 
 // tslint:disable:no-any
 
@@ -31,12 +31,12 @@ export interface FieldTemplateProps {
   /**
    * Style of field text.
    */
-  textStyle?: TextStyle
+  textStyle?: StyleProp<TextStyle>
 
   /**
    * Style of field container.
    */
-  containerStyle?: ViewStyle
+  containerStyle?: StyleProp<ViewStyle>
 
   /**
    * Image element for clear button.
@@ -61,12 +61,12 @@ export interface OptionTemplateProps {
   /**
    * Style of option text.
    */
-  textStyle?: TextStyle
+  textStyle?: StyleProp<TextStyle>
 
   /**
    * Style of option container.
    */
-  containerStyle?: ViewStyle
+  containerStyle?: StyleProp<ViewStyle>
 }
 
 /**
@@ -168,7 +168,7 @@ export interface CustomPickerProps {
   /**
    * Style of field container.
    */
-  style?: ViewStyle
+  style?: StyleProp<ViewStyle>
 
   /**
    * Props for field template.
@@ -178,12 +178,12 @@ export interface CustomPickerProps {
   /**
    * Style of modal backdrop.
    */
-  backdropStyle?: ViewStyle
+  backdropStyle?: StyleProp<ViewStyle>
 
   /**
    * Dropdown modal style.
    */
-  modalStyle?: ViewStyle
+  modalStyle?: StyleProp<ViewStyle>
 
   /**
    * Maximum height of modal.
