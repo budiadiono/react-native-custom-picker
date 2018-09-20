@@ -113,7 +113,7 @@ export class CustomPicker extends React.PureComponent<
                     {options.map((o, index) => (
                       <TouchableOpacity
                         onPress={() => {
-                          this.selectOption(o)
+                          this.selectOption(o, true)
                         }}
                         key={index}
                       >
@@ -139,13 +139,13 @@ export class CustomPicker extends React.PureComponent<
   componentDidMount() {
     const { value, defaultValue } = this.props
     if (value || defaultValue) {
-      this.selectOption(value || defaultValue)
+      this.selectOption(value || defaultValue, false)
     }
   }
 
   componentWillReceiveProps(nextProps: CustomPickerProps) {
     if (nextProps.value !== this.props.value) {
-      this.selectOption(nextProps.value)
+      this.selectOption(nextProps.value, false)
     }
   }
 
@@ -181,11 +181,11 @@ export class CustomPicker extends React.PureComponent<
    * Select an option.
    * @param selectedItem Item/option to select.
    */
-  selectOption(selectedItem: any) {
+  selectOption(selectedItem: any, triggerEvent: boolean) {
     const { onValueChange } = this.props
     this.setState({ selectedItem }, () => {
       this.hideOptions()
-      if (onValueChange) {
+      if (triggerEvent && onValueChange) {
         onValueChange(selectedItem)
       }
     })
@@ -196,7 +196,7 @@ export class CustomPicker extends React.PureComponent<
    */
   clear() {
     const { defaultValue } = this.props
-    this.selectOption(defaultValue || null)
+    this.selectOption(defaultValue || null, true)
   }
 }
 
