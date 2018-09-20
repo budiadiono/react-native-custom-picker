@@ -33,7 +33,7 @@ describe('CustomPicker Basic Tests', () => {
     )
 
     const customPicker = wrapper.instance() as CustomPicker
-    customPicker.selectOption('3')
+    customPicker.selectOption('3', true)
     expect(selectedValue).toEqual('3')
   })
 
@@ -62,7 +62,7 @@ describe('CustomPicker Basic Tests', () => {
     expect(customPicker.props.defaultValue).toEqual('3')
     expect(customPicker.props.value).toEqual('1')
 
-    customPicker.selectOption('2')
+    customPicker.selectOption('2', true)
     expect(selectedValue).toEqual('2')
 
     customPicker.clear()
