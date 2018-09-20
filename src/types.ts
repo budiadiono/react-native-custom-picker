@@ -166,6 +166,11 @@ export interface CustomPickerProps {
   optionTemplateProps?: OptionTemplateProps
 
   /**
+   * Container style.
+   */
+  containerStyle?: StyleProp<ViewStyle>
+
+  /**
    * Style of field container.
    */
   style?: StyleProp<ViewStyle>

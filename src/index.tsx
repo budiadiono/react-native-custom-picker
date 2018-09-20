@@ -47,6 +47,7 @@ export class CustomPicker extends React.PureComponent<
 
   render() {
     const {
+      containerStyle,
       modalAnimationType,
       fieldTemplate,
       optionTemplate,
@@ -75,7 +76,7 @@ export class CustomPicker extends React.PureComponent<
       this.props.maxHeight || Dimensions.get('window').height - 60
 
     return (
-      <View>
+      <View style={containerStyle}>
         <TouchableOpacity onPress={this.showOptions}>
           <View style={style}>
             {ft({
