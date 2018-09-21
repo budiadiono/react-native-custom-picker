@@ -36,7 +36,10 @@ export class CustomPicker extends React.PureComponent<
     super(props)
     this.state = {
       modalVisible: false,
-      selectedItem: null
+      selectedItem: this.defaultWhenEmpty(
+        this.props.value,
+        this.props.defaultValue
+      )
     }
     this.showOptions = this.showOptions.bind(this)
     this.hideOptions = this.hideOptions.bind(this)
@@ -139,7 +142,7 @@ export class CustomPicker extends React.PureComponent<
   componentDidMount() {
     const { value, defaultValue } = this.props
     if (value || defaultValue) {
-      this.selectOption(value || defaultValue, false)
+      this.selectOption(this.defaultWhenEmpty(value, defaultValue), false)
     }
   }
 
@@ -197,6 +200,10 @@ export class CustomPicker extends React.PureComponent<
   clear() {
     const { defaultValue } = this.props
     this.selectOption(defaultValue || null, true)
+  }
+
+  defaultWhenEmpty(value: any, defaultValue: any) {
+    return value === null || value === undefined ? defaultValue : value
   }
 }
 
