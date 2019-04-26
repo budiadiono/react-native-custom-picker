@@ -1,5 +1,6 @@
 import { shallow } from 'enzyme'
 import * as React from 'react'
+import { RefreshControl, RefreshControlProperties } from 'react-native'
 import { CustomPicker, CustomPickerProps } from '../'
 
 describe('CustomPicker Basic Tests', () => {
@@ -21,7 +22,7 @@ describe('CustomPicker Basic Tests', () => {
     expect(customPicker.props.onBlur).toEqual(undefined)
   })
 
-  it('should able to select item', () => {
+  it('should be able to select item', () => {
     let selectedValue = null
     const wrapper = shallow<CustomPickerProps>(
       <CustomPicker
@@ -37,7 +38,7 @@ describe('CustomPicker Basic Tests', () => {
     expect(selectedValue).toEqual('3')
   })
 
-  it('should able to set default value', () => {
+  it('should be able to set default value', () => {
     const wrapper = shallow<CustomPickerProps>(
       <CustomPicker options={['1', '2', '3']} defaultValue={'1'} />
     )
@@ -45,7 +46,7 @@ describe('CustomPicker Basic Tests', () => {
     expect(customPicker.props.defaultValue).toEqual('1')
   })
 
-  it('should able to set initial value and default value', () => {
+  it('should be able to set initial value and default value', () => {
     let selectedValue = null
     const wrapper = shallow<CustomPickerProps>(
       <CustomPicker
@@ -67,5 +68,21 @@ describe('CustomPicker Basic Tests', () => {
 
     customPicker.clear()
     expect(selectedValue).toEqual('3')
+  })
+
+  it('should apply an optional refreshControl to the ScrollView', () => {
+    const onRefresh = jest.fn()
+    const wrapper = shallow<CustomPickerProps>(
+      <CustomPicker
+        options={['1', '2', '3']}
+        refreshControl={<RefreshControl
+          refreshing={false}
+          onRefresh={onRefresh}
+        />}
+      />
+    )
+    const rc = wrapper.find('ScrollView')
+      .at(0).prop<React.Component<RefreshControlProperties>>('refreshControl');
+    expect(rc.props.onRefresh).toBe(onRefresh);
   })
 })

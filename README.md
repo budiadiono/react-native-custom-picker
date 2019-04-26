@@ -39,6 +39,7 @@ yarn add react-native-custom-picker
 | backdropStyle       | ViewStyle | default         | Style of modal backdrop.                          |
 | modalStyle          | ViewStyle | default         | Dropdown modal style.                             |
 | maxHeight           | ViewStyle | default         | Maximum height of modal.                          |
+| refreshControl      | [RefreshControl](https://facebook.github.io/react-native/docs/refreshcontrol) | undefined | Component for pull-to-refresh functionality.
 | onValueChange       | ViewStyle | undefined       | Event fired when value has been changed.          |
 | onFocus             | ViewStyle | undefined       | Event fired when modal is opened.                 |
 | onBlur              | ViewStyle | undefined       | Event fired when modal is closed.                 |
@@ -146,7 +147,7 @@ export class CustomExample extends React.Component {
       </View>
     )
   }
-  
+
   renderHeader() {
     return (
       <View style={styles.headerFooterContainer}>

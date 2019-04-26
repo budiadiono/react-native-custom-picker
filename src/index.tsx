@@ -62,7 +62,8 @@ export class CustomPicker extends React.PureComponent<
       fieldTemplateProps,
       optionTemplateProps,
       backdropStyle,
-      modalStyle
+      modalStyle,
+      refreshControl
     } = this.props
 
     const actions: CustomPickerActions = {
@@ -112,7 +113,9 @@ export class CustomPicker extends React.PureComponent<
                   style={[{ backgroundColor: 'white', maxHeight }, modalStyle]}
                 >
                   {headerTemplate && headerTemplate(actions)}
-                  <ScrollView>
+                  <ScrollView
+                    refreshControl={refreshControl}
+                  >
                     {options.map((o, index) => (
                       <TouchableOpacity
                         onPress={() => {

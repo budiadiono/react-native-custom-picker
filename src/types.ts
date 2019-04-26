@@ -1,4 +1,4 @@
-import { StyleProp, TextStyle, ViewStyle } from 'react-native'
+import { RefreshControlProps, StyleProp, TextStyle, ViewStyle } from 'react-native'
 
 // tslint:disable:no-any
 
@@ -194,6 +194,11 @@ export interface CustomPickerProps {
    * Maximum height of modal.
    */
   maxHeight?: number
+
+  /**
+   * Component for pull-to-refresh functionality.
+   */
+  refreshControl?: React.ReactElement<RefreshControlProps>
 
   /**
    * Event fired when value has been changed.
