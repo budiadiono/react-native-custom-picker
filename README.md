@@ -40,6 +40,7 @@ yarn add react-native-custom-picker
 | modalStyle          | ViewStyle | default         | Dropdown modal style.                             |
 | maxHeight           | ViewStyle | default         | Maximum height of modal.                          |
 | refreshControl      | [RefreshControl](https://facebook.github.io/react-native/docs/refreshcontrol) | undefined | Component for pull-to-refresh functionality.
+| scrollViewProps     | ScrollViewProps | undefined | ScrollView props. See: https://github.com/budiadiono/react-native-custom-picker/issues/3 |
 | onValueChange       | ViewStyle | undefined       | Event fired when value has been changed.          |
 | onFocus             | ViewStyle | undefined       | Event fired when modal is opened.                 |
 | onBlur              | ViewStyle | undefined       | Event fired when modal is closed.                 |

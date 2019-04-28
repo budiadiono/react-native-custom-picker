@@ -1,4 +1,10 @@
-import { RefreshControlProps, StyleProp, TextStyle, ViewStyle } from 'react-native'
+import {
+  RefreshControlProps,
+  ScrollViewProps,
+  StyleProp,
+  TextStyle,
+  ViewStyle
+} from 'react-native'
 
 // tslint:disable:no-any
 
@@ -199,6 +205,11 @@ export interface CustomPickerProps {
    * Component for pull-to-refresh functionality.
    */
   refreshControl?: React.ReactElement<RefreshControlProps>
+
+  /**
+   * ScrollView props. See: https://github.com/budiadiono/react-native-custom-picker/issues/3
+   */
+  scrollViewProps?: ScrollViewProps
 
   /**
    * Event fired when value has been changed.
