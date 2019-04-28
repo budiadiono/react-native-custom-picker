@@ -1,6 +1,6 @@
 {
   "name": "react-native-custom-picker",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "React native customizable picker component.",
   "main": "dist/index.js",
   "typings": "typings/index.d.ts",
