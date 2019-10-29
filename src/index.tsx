@@ -50,6 +50,7 @@ export class CustomPicker extends React.PureComponent<
 
   render() {
     const {
+      disabled,
       containerStyle,
       modalAnimationType,
       fieldTemplate,
@@ -82,7 +83,7 @@ export class CustomPicker extends React.PureComponent<
 
     return (
       <View style={containerStyle}>
-        <TouchableOpacity onPress={this.showOptions}>
+        <TouchableOpacity onPress={this.showOptions} disabled={disabled}>
           <View style={style}>
             {ft({
               defaultText: placeholder as string,
@@ -214,6 +215,7 @@ export class CustomPicker extends React.PureComponent<
 
 // Re-export all types for convenience use.
 export {
+  disabled,
   CustomPickerActions,
   CustomPickerProps,
   CustomPickerState,
