@@ -151,7 +151,7 @@ export class CustomPicker extends React.PureComponent<
     }
   }
 
-  componentWillReceiveProps(nextProps: CustomPickerProps) {
+  componentDidUpdate(nextProps: CustomPickerProps) {
     if (nextProps.value !== this.props.value) {
       this.selectOption(nextProps.value, false)
     }
