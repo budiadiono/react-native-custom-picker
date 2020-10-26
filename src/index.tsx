@@ -24,7 +24,7 @@ import {
 export class CustomPicker extends React.PureComponent<
   CustomPickerProps,
   CustomPickerState
-> {
+  > {
   static defaultProps: Partial<CustomPickerProps> = {
     fieldTemplate: defaultFieldTemplate,
     optionTemplate: defaultOptionTemplate,
@@ -151,7 +151,7 @@ export class CustomPicker extends React.PureComponent<
     }
   }
 
-  componentWillReceiveProps(nextProps: CustomPickerProps) {
+  componentDidUpdate(nextProps: CustomPickerProps) {
     if (nextProps.value !== this.props.value) {
       this.selectOption(nextProps.value, false)
     }
