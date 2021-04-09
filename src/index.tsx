@@ -97,6 +97,7 @@ export class CustomPicker extends React.PureComponent<
           visible={this.state.modalVisible}
           onRequestClose={this.hideOptions}
           animationType={modalAnimationType}
+          supportedOrientations={['portrait', 'landscape']}
         >
           <TouchableWithoutFeedback onPress={this.hideOptions}>
             <View
